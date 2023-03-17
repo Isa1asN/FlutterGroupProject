@@ -8,7 +8,7 @@ Group Project on Mobile Application Development <br/>
 |2.| Fedasa Bote| UGR/6761/13|
 |3.| Natinael Fekadu| UGR/3628/13|
 |4.|Olyad Temesgen| UGR/4133/13|
-|5.| yosef muluneh| UGR/5715/13|
+|5.| Yosef muluneh| UGR/5715/13|
 
 ## Description: <br/>
 The Afan Oromo learning app is a mobile application designed to help users learn the Afan Oromo language. 
