@@ -1,6 +1,6 @@
 # FlutterGroupProject
-Group Project on Mobile Application Development 
-Project Title: Afan Oromo learning App
+Group Project on Mobile Application Development <br/>
+## Project Title: Afan Oromo learning App
 ## group members :<br/>
 1. Esayas Nigussie UGR/5132/13<br/>
 2. Fedasa Bote UGR/6761/13<br/>
