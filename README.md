@@ -8,4 +8,6 @@ Group Project on Mobile Application Development <br/>
 4. Olyad Temesgen UGR/4133/13<br/>
 5. yosef muluneh UGR/5715/13<br/>
 
+## Description: <br/>
+The Afan Oromo learning app is a mobile application designed to help users learn the Afan Oromo language. The app includes a range of features, including lesson plans, quizzes, and progress tracking. Users can create an account and log in as a Learner to access the learning content.
 
