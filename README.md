@@ -19,4 +19,4 @@ as a Learner to access the learning content.
 
  **FeatureChanged**
  The Afan Oromo learning app is a mobile application designed to help users learn the Afan Oromo language. 
-The app includes a range of features, including vocabulary management(CRUD), progress tracking(CRUD) and announcement management(CRUD). Users can create an account and log in as a Learner to access the learning content.
+The app includes a range of features, including vocabulary management(CRUD), progress tracking(CRUD) and Word of the Day(CRUD) features. Users can create an account and log in as a Learner to access the learning content.
