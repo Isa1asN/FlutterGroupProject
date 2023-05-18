@@ -25,8 +25,4 @@ router.post('/logout', logout);
 // Delete user Account
 router.delete('/deleteAccount', deleteAccount);
 
-// Auth learner only
-router.get('/events', verifyUserToken, IsUser, userEvent);
 
-// Auth Admin only
-router.get('/special', verifyUserToken, IsAdmin, adminEvent);
