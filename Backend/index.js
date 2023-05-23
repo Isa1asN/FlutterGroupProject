@@ -2,39 +2,31 @@ import express from "express";
 import mongoose from "mongoose";
 import dotenv from "dotenv";
 import bodyParser from "body-parser";
-import {router} from "./routes/authRoutes.js"
-import User from "./models/user.js";
+import {authRouter} from "./routes/authRoutes.js"
+import { userRouter } from "./routes/users.js";
+import { profileRouter } from "./routes/profile.js";
+import { courseRouter } from "./routes/progress.js";
+import { wordRouter } from "./routes/wordOfTD.js";
 dotenv.config();
 
 const app = express();
 app.use(bodyParser.json());
 
 
-app.get('/', (req, res) => {
-    User.find({})
-        .then(found => {
-            res.send(found);
-        })
-        .catch(err => {
-            console.log(err);
-            res.status(500).send("Some error occurred!");
-        });
-});
-// app.get('/del', (req, res) => {
-//     User.deleteMany({})
-//       .then(() => {
-//         res.send('All data deleted successfully.');
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//         res.status(500).send('Some error occurred!');
-//       });
-//   });
-  
+// Auth related routes
+app.use('/auth', authRouter);
 
+// Users related routes
+app.use('/api', userRouter);
 
-// Route Middlewares
-app.use('/api', router);
+// Profile route
+app.use('/api', profileRouter);
+
+// course progress route
+app.use('/course-progress', courseRouter);
+
+// word of the day route
+app.use('/wordOfTD', wordRouter)
 
 const PORT = process.env.PORT || 5000;
 mongoose.connect(process.env.MONGO_URL,{
