@@ -8,8 +8,8 @@ const transporter = nodemailer.createTransport({
         type: 'OAuth2',
         user: 'afanoroapp@gmail.com',
         clientId: '789412747365-c5aj0vrnk4vsedap5m0rsm3hm5jgmu3v.apps.googleusercontent.com',
-        clientSecret: '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',
-        refreshToken: '1//04Nv7SNuCQnucCgYIARAAGAQSNwF-L9IrVnUORPTd-HlmoPFxe9PIO2t0Q11ZSLaRcw8SJdZsNIInKvfiFzUIDPfWSz6Dm6aFEwA',
+        clientSecret: '',
+        refreshToken: '',
            
     }
     });
