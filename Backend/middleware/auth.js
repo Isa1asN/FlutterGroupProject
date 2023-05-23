@@ -13,6 +13,7 @@ export const verifyUserToken = async (req, res, next) => {
         if (!verifiedUser) return res.status(401).send('Unauthorized request')
 
         req.user = verifiedUser; 
+        // console.log(verifiedUser);
         next();
 
     } catch (error) {
@@ -32,7 +33,18 @@ export const IsAdmin =  (req, res, next) => {
        return next();
     }
 
-    return res.status(401).send("Unauthorized admin!");
-
+    return res.status(401).send("Unauthorized!");
 }
+export const IsModerator =  (req, res, next) => {
+    if (req.user.role == "moderator") {
+       return next();
+    }
 
+    return res.status(401).send("Unauthorized!");
+}
+export const IsNotUser =  (req, res, next) => {
+    if (req.user.role !== 'learner') {
+       return next();
+    }
+    return res.status(401).send("Unauthorized!");   
+}
