@@ -1,0 +1,10 @@
+### creating an adimin
+POST "https://localhost:3003/auth/register"
+Content-Type: application/json
+
+{
+    "name":"Fedasa Gete",
+    "email":"fedasabote@gmail.com",
+    "password":"fedasagete",
+    "role":"admin"
+}
