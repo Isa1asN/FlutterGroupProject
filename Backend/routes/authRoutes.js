@@ -23,5 +23,5 @@ authRouter.post('/resetPassword', resetPassword);
 authRouter.post('/logout', logout);
 
 // Delete user Account
-authRouter.delete('/deleteAccount', deleteAccount);
+authRouter.post('/del-account/:userId', deleteAccount);
 

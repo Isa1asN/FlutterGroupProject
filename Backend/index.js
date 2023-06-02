@@ -7,6 +7,7 @@ import { userRouter } from "./routes/users.js";
 import { profileRouter } from "./routes/profile.js";
 import { courseRouter } from "./routes/progress.js";
 import { wordRouter } from "./routes/wordOfTD.js";
+import { vocabRoute } from "./routes/vocabulary.js";
 dotenv.config();
 
 const app = express();
@@ -26,7 +27,8 @@ app.use('/api', profileRouter);
 app.use('/course-progress', courseRouter);
 
 // word of the day route
-app.use('/wordOfTD', wordRouter)
+app.use('/wordOfTD', wordRouter);
+app.use('/api', vocabRoute);
 
 const PORT = process.env.PORT || 5000;
 mongoose.connect(process.env.MONGO_URL,{

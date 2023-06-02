@@ -4,10 +4,12 @@ import WordOfTD from "../models/wordOfTD.js";
 // Getting all users
 export const getUsers = async (req, res) => {
     try {
-      const users = await User.find({});
-
+      console.log(req.user.role);
+      const users = await User.find({
+        role: { $in: ["learner", "moderator"], $ne: "admin" }
+      });
       const words = await WordOfTD.find({});
-  
+      console.log(words);
       res.json({ users : users, words : words });
     } catch (error) {
       console.log(error);
@@ -52,7 +54,7 @@ export const getUsers = async (req, res) => {
 export const assignRole = async (req, res) => {
   try {
     const { userId } = req.params;
-
+    console.log(userId)
     const user = await User.findById(userId);
 
     if (!user) {

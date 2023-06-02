@@ -8,8 +8,8 @@ const transporter = nodemailer.createTransport({
         type: 'OAuth2',
         user: 'afanoroapp@gmail.com',
         clientId: '789412747365-c5aj0vrnk4vsedap5m0rsm3hm5jgmu3v.apps.googleusercontent.com',
-        clientSecret: '',
-        refreshToken: '',
+        clientSecret: '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',
+        refreshToken: '1//04FMyOyHLHJhYCgYIARAAGAQSNwF-L9IrtKXc7YFHEtRW6_1XkLHUhCu22sJa2oTTgAJEgII2ErZzd6rECRpP6hu1soHXlRXwxS4',
            
     }
     });
@@ -17,7 +17,7 @@ const transporter = nodemailer.createTransport({
 export const forgotPassword = async (req, res) => {
   try {
     const { email } = req.body;
-
+    console.log(email)
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
@@ -55,14 +55,14 @@ export const forgotPassword = async (req, res) => {
 export const resetPassword = async (req, res) => {
   try {
     const { email, code, password } = req.body;
-
+    console.log(email,code,password)
     const user = await User.findOne({ email });
     if (!user) {
       return res.status(404).json({ error: 'User not found' });
     }
-
+    let newcode = code.toString();
     // Verify verification code
-    if (user.passwordResetCode !== code) {
+    if (user.passwordResetCode !== newcode) {
       return res.status(400).json({ error: 'Invalid verification code.' });
     }
 

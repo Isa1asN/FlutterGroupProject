@@ -24,6 +24,7 @@ const VocabSchema = mongoose.Schema(
             max: 100,
         },
         createdById : String,
+        localId : Number
     },
     {timeStamps: true}
 )

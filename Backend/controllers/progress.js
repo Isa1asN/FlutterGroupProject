@@ -78,3 +78,32 @@ export const setProgress = async (req, res) => {
     }
   };
   
+
+  export const setAllProgresses = async (req, res) => {
+    const userId = req.user.id;
+
+    const { alphabet, sound, word, sentence, paragraph } = req.body;
+
+    try {
+
+        const updatedProgress = await CourseProgress.findOneAndUpdate(
+            { userId: userId },
+            { alphabet, sound, word, sentence, paragraph },
+            { new: true }
+        );
+
+        return res.status(201).json({
+          progress: [
+            updatedProgress.alphabet,
+            updatedProgress.sound,
+            updatedProgress.word,
+            updatedProgress.sentence,
+            updatedProgress.paragraph,
+          ],
+        });
+      
+    } catch (error) {
+      console.error(error);
+      return res.sendStatus(500);
+    }
+  };

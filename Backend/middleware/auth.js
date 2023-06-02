@@ -48,3 +48,10 @@ export const IsNotUser =  (req, res, next) => {
     }
     return res.status(401).send("Unauthorized!");   
 }
+
+export const IsNotAdmin =  (req, res, next) => {
+    if (req.user.role !== 'admin') {
+       return next();
+    }
+    return res.status(401).send("Unauthorized!");   
+}

@@ -22,7 +22,13 @@ const WordSchema = new mongoose.Schema(
         example :{
             type: String,
             required: true,
-        }
+        },
+        localId : {
+            type : Number,
+            required : true,
+        },
+        createdBy : String
+        
     },
     {timeStamps: true}
 )
