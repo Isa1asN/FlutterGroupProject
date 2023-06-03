@@ -1,0 +1,22 @@
+[
+  {
+    "img": "images/la.jpg",
+    "type" : "Hima",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/laa.png",
+    "type": "Hima gaaffii",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/abc.png",
+    "type": "Hima ajaayibsifannaa",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/dachaa.jpg",
+    "type" : "Hima ajajaa",
+    "nextPage" : ""
+  }
+]

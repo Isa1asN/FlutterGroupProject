@@ -1,0 +1,17 @@
+[
+  {
+    "img": "images/caplet.jpg",
+    "type" : "Qubee gurguddaa/capital letters",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/abc.png",
+    "type": "Qubee xixiqqaa/ small letters",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/dachaa.jpg",
+    "type" : "Qubee dachaa",
+    "nextPage" : ""
+  }
+]

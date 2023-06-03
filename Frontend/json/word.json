@@ -1,0 +1,32 @@
+[
+  {
+    "img": "images/short.jpg",
+    "type" : "Jecha gabaabaa",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/seenaa.jpg",
+    "type": "Jecha dheeraa",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/soft.png",
+    "type" : "Jecha laafaa",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/jabaa.jpg",
+    "type" : "Jecha jabaa",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/marga.png",
+    "type" : "Jecha irra-butaa",
+    "nextPage" : ""
+  },
+  {
+    "img": "images/capital.jpg",
+    "type" : "Jecha hudhaa",
+    "nextPage" : ""
+  }
+]
